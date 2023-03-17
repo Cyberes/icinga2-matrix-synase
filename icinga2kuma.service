@@ -1,0 +1,14 @@
+[Unit]
+Description=Icinga to Kuma converter.
+After=network.target
+
+[Service]
+User=flask
+Environment="ICINGA2KUMA_ICINGA2_PW=[your icinga2 API password]"
+WorkingDirectory=/opt/icinga2-checks
+ExecStart=/usr/local/bin/gunicorn -b 0.0.0.0:8081 -w 4 icinga2kuma:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
