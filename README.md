@@ -12,6 +12,10 @@ These are Icinga2 checks that I use to monitor my Matrix Synapse server. They're
 
 
 
+`check_federation_tester.py` uses the federation tester service, either `fed.mau.dev` or `federationtester.matrix.org`. You must provide the endpoint via `--endpoint`, for example `--endpoint https://federationtester.matrix.org/api/report?server_name=example.com`.
+
+
+
 `check_matrix_synapse.py` uses Grafana to check a bunch of metrics. Make sure you have set up the [official Grafana dashboard](https://matrix-org.github.io/synapse/latest/usage/administration/understanding_synapse_through_grafana_graphs.html). Make sure to review `checker/synapse_grafana.py` and add your worker jobs to the REST calls (for example, replace `federation-receiver|federation-sender|initialsync|synapse|synchrotron`).
 
 
