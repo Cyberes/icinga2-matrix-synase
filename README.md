@@ -1,5 +1,5 @@
 # icinga2-matrix-synase
-
+_Various checks for a Matrix Synapse server._
 
 
 These are Icinga2 checks that I use to monitor my Matrix Synapse server. They're a little rough around the edges and you will likely need to adapt the code to fit your needs.
